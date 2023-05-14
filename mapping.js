@@ -1,7 +1,5 @@
-
-
-
 window.onkeydown = function (e) {
+    console.log(e);
     switch (e['code']) {
 
         //erase
@@ -11,10 +9,6 @@ window.onkeydown = function (e) {
 
 
         //top digits
-        case 'Digit0':
-            document.getElementById("Button_0").click()
-            break;
-
         case 'Digit1':
             document.getElementById("Button_1").click()    
             break;
@@ -36,7 +30,8 @@ window.onkeydown = function (e) {
             break;
 
         case 'Digit6':
-            document.getElementById("Button_6").click()    
+            if(!e.shiftKey){document.getElementById("Button_6").click()}
+            else{document.getElementById("Button_^").click()}   
             break;
 
         case 'Digit7':
@@ -44,9 +39,38 @@ window.onkeydown = function (e) {
             break;
 
         case 'Digit8':
-            document.getElementById("Button_8").click()
+            if(!e.shiftKey){document.getElementById("Button_8").click()}
+            else{document.getElementById("Button_*").click()}  
             break;
 
+        case 'Digit9':
+            if(!e.shiftKey){document.getElementById("Button_9").click()}
+            else{document.getElementById("Button_(").click()}  
+            break;
+
+        case 'Digit0':
+            if(!e.shiftKey){document.getElementById("Button_0").click()}
+            else{document.getElementById("Button_)").click()}  
+            break;
+
+
+
+        //numpad operators
+        case 'NumpadDivide':
+            document.getElementById("Button_/").click()   
+            break;
+
+        case 'NumpadMultiply':
+            document.getElementById("Button_*").click()
+            break;
+
+        case 'NumpadSubtract':
+            document.getElementById("Button_-").click()    
+            break;
+
+        case 'NumpadAdd' :
+            document.getElementById("Button_+").click()
+            break;
 
 
         //numpad    
@@ -94,6 +118,10 @@ window.onkeydown = function (e) {
             document.getElementById("Button_9").click()   
             break;
 
+
+        case 'Backspace':
+            document.getElementById("Backspace").click()
+            break;
 
         default:
             break;
