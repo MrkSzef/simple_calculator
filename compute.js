@@ -56,11 +56,11 @@ window.onload = function(){
                         compute();
                     }
                     else if (parseInt(document.getElementById("E_Display").clientWidth) <= 260 && document.getElementById("E_Display").textContent.length <= 26){
-                        document.getElementById("E_Display").textContent += elm.value
+                        document.getElementById("E_Display").textContent += elm.value;
                         compute();
                     }
                 })
                 break;
         }
-    })
-};
+    }
+)};
