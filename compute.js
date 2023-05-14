@@ -3,17 +3,17 @@ function compute(){
         let str = document.getElementById("E_Display").textContent
         let arr = [...str.matchAll(/[0-9)][(]/g)]
         for (let i = 0; i < arr.length; i++) {
-            str = str.slice(0,arr[i]['index']+(i+1))+"*"+str.slice(arr[i]['index']+(i+1))
+            str = str.slice(0,arr[i]['index']+1+i)+"*"+str.slice(arr[i]['index']+1+i)
         }
         str = eval(str.replace("()","").replace("^","**"))
         if(str != undefined){
             document.getElementById("V_Display").textContent = `= ${str}`
         }
         else{
-            document.getElementById("V_Display").textContent = ``
+            document.getElementById("V_Display").textContent = ''
         }
     } catch (error) {
-        document.getElementById("V_Display").textContent = `Error`
+        document.getElementById("V_Display").textContent = 'Error'
         
     }
 }

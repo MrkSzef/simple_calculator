@@ -1,5 +1,4 @@
 window.onkeydown = function (e) {
-    console.log(e);
     switch (e['code']) {
 
         //erase
